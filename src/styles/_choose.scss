@@ -1,0 +1,36 @@
+@use 'colors';
+.choose-character {
+    padding: 56px;
+    text-align: center;
+
+    &__title {
+        padding: 64px;
+        font-size: 40px;
+        font-family: 'Bungee Spice', sans-serif;
+        color: colors.$corTextoPrincipal;
+
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+
+        &__item {
+            padding: 16px;
+
+            h2 {
+                font-family: 'Bungee Spice', sans-serifs;
+                color: colors.$corTextoPrincipal;
+                padding-top: 8px;
+            }
+
+            img {
+                width: 200px;
+                border-radius: 16px;
+            }
+
+
+        }
+    }
+
+
+}
