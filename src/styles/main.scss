@@ -1,0 +1,62 @@
+@use 'variaveis';
+@use 'hero';
+@use 'characters';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
+
+
+@mixin title($font-size: 1em){
+    font-size: $font-size;
+    font-family: 'Bungee Hairline', cursive;
+    color: variaveis.$corTextoSecundario;
+
+}
+
+@mixin text($font-size: 1.2em){
+    font-size: $font-size;
+    font-family: 'Rajdhani', sans-serif;
+    color: variaveis.$corTextoSecundario;
+}
+
+
+.title {
+    @include title(3.2em);
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+.title--big{
+    @include title(2.5em);
+}
+
+.title--med {
+    @include title(2em)
+}
+
+.title--small {
+    @include title(1.6em)
+}
+
+.text {
+    @include text;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+
+    .container {
+        max-width: 1023px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        
+
+    }
+
+  
+}

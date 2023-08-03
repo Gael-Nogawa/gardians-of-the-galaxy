@@ -1,0 +1,26 @@
+@use 'variaveis';
+
+
+.hero {
+    
+    min-height: 70vh;
+    background-image: url(../images/Guardioes-da-Galaxia-Vol3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+    
+    &__branding {
+        backdrop-filter: blur(10px);
+        max-width: 800px;
+        width: 100%;
+        height: 80%;
+        border-radius: 20px;
+        background-color: variaveis.$corFundoLogin;
+        border: 2px solid variaveis.$corFundoLogin;
+        text-shadow: 2px 2px 2px variaveis.$corTextShadow;
+        padding: 60px;
+    }
+}
