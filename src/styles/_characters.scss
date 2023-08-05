@@ -2,23 +2,37 @@
 
 .characters {
 
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(3, 33%);
-
-        &__item {
-            img {
-                width: 200px;
-
-
-            }
-        }
-    }
-
+    
     &__tab {
         &__button {
             color: variaveis.$corTextoSecundario;
             background-color: variaveis.$corDeFundo;
+            letter-spacing: 2px;
+            border: none;
+            padding: 8px;
+            
+            &--is-active {
+                border-bottom: 5px solid variaveis.$corTextoSecundario;
+            }
+        }
+    }
+    
+    &__list {
+
+        &__item {
+            display: none;
+            padding: 40px;  
+            
+            &--is-active {
+                display: block;
+            }
+
+            img {
+                width: 200px;
+                margin: 0 auto;
+            }
+
+
         }
     }
 }
