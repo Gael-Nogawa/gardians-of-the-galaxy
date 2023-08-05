@@ -18,57 +18,59 @@
             <h2 class="title--big">Veja as histórias de cada personagem</h2>
 
             <nav class="characters__tabs">
-                <button class="characters__tab__button">Peter Quill</button>
-                <button class="characters__tab__button">Gamora</button>
-                <button class="characters__tab__button">Groot</button>
-                <button class="characters__tab__button">Drax</button>
-                <button class="characters__tab__button">Rocket</button>
-                <button class="characters__tab__button">Mantis</button>
-                <button class="characters__tab__button">Nebulosa</button>
-                <button class="characters__tab__button">Cosmo</button>
-                <button class="characters__tab__button">Kraglin</button>
+                <button data-tab-button="quil" class="characters__tab__button characters__tab__button--is-active text">Peter Quill</button>
+                <button data-tab-button="gamora" class="characters__tab__button text">Gamora</button>
+                <button data-tab-button="groot" class="characters__tab__button text">Groot</button>
+                <button data-tab-button="drax" class="characters__tab__button text">Drax</button>
+                <button data-tab-button="rocket" class="characters__tab__button text">Rocket</button>
+                <button data-tab-button="mantis" class="characters__tab__button text">Mantis</button>
+                <button data-tab-button="nebulosa" class="characters__tab__button text">Nebulosa</button>
+                <button data-tab-button="cosmo" class="characters__tab__button text">Cosmo</button>
+                <button data-tab-button="kraglin" class="characters__tab__button text">Kraglin</button>
             </nav>
 
-            <nav>
-                <ul class="characters__list">
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                    <li class="characters__list__item">
-                        <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
-                        <button class="title--small">Peter Quill</button>
-                    </li>
-                </ul>
-            </nav>
+            
+            <div class="characters__list">
+                <li data-tab-id="quil" class="characters__list__item  characters__list__item--is-active">
+                    <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
+                    <h3 class="title--small">Peter Quill</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt aliquid expedita optio laboriosam ipsa architecto consequuntur, cupiditate aspernatur ratione excepturi. Fugit quasi fuga dolore dolorum optio cumque laudantium veritatis sit?</p>
+
+                </li>
+                <li data-tab-id="gamora" class="characters__list__item">
+                    <img src="./dist/images/characters/gamora.png" alt="Gamora">
+                    <h3 class="title--small">Peter Quill</h3>
+                </li>
+                <li data-tab-id="groot" class="characters__list__item">
+                    <img src="./dist/images/characters/groot-novo-e-velho.jpg" alt="Eu sou Groot">
+                    <h3 class="title--small">Peter Quill</h3>
+                </li>
+                <li data-tab-id="drax" class="characters__list__item">
+                    <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
+                    <h3 class="title--small">Peter Quill</h3>
+                </li>
+                <li data-tab-id="rocket" class="characters__list__item">
+                    <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
+                    <h3 class="title--small">Peter Quill</h3>
+                </li>
+                <li data-tab-id="mantis" class="characters__list__item">
+                    <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
+                    <h3 class="title--small">Peter Quill</h3>
+                </li>
+                <li data-tab-id="nebulosa" class="characters__list__item">
+                    <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
+                    <h3 class="title--small">Peter Quill</h3>
+                </li>
+                <li data-tab-id="cosmo" class="characters__list__item">
+                    <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
+                    <h3 class="title--small">Peter Quill</h3>
+                </li>
+                <li data-tab-id="kraglin" class="characters__list__item">
+                    <img src="./dist/images/characters/quill.jpg" alt="Peter Quill">
+                    <h3 class="title--small">Peter Quill</h3>
+                </li>
+            </div>
+            
 
         </section>
 
@@ -81,7 +83,7 @@
 
     </div>
 
-   
+   <script src="./src/scripts/main.js"></script>
 
     
 </body>
