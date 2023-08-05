@@ -1,9 +1,10 @@
 @use 'variaveis';
 
 .characters {
-
+    
     
     &__tab {
+
         &__button {
             color: variaveis.$corTextoSecundario;
             background-color: variaveis.$corDeFundo;
@@ -13,24 +14,33 @@
             
             &--is-active {
                 border-bottom: 5px solid variaveis.$corTextoSecundario;
+
             }
         }
     }
     
     &__list {
+        
+        padding: 50px;
 
         &__item {
             display: none;
-            padding: 40px;  
-            
-            &--is-active {
-                display: block;
-            }
+            text-align: center;
 
+            h3 {
+                padding: 16px;
+            }
+            
             img {
                 width: 200px;
                 margin: 0 auto;
             }
+            
+            &--is-active {
+                display: block;
+
+            }
+
 
 
         }
