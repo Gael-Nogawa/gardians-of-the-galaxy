@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
             escondeAbas();
             aba.classList.add('characters__list__item--is-active');
             removeBotaoAtivo();
-            botao.target.classList.add('characters__tab__button--is-active');
+            botao.target.classList.add('characters__tabs__button--is-active');
             
         })
     }
@@ -22,7 +22,7 @@ function removeBotaoAtivo(){
     const buttons = document.querySelectorAll('[data-tab-button]');
 
     for (let i = 0; i < buttons.length; i++){
-        buttons[i].classList.remove('characters__tab__button--is-active');
+        buttons[i].classList.remove('characters__tabs__button--is-active');
     }
 
 }

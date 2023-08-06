@@ -1,18 +1,39 @@
 @use 'variaveis';
 
+@mixin buttonForm {
+    color: variaveis.$corTextoSecundario;
+    background-color: variaveis.$corDeFundo;
+    letter-spacing: 2px;
+    border: none;
+    border-bottom: 5px solid transparent;
+    padding: 8px;
+    
+}
+
 .characters {
     
+    text-align: center;
+    padding: 100px;
+
+    h2 {
+        padding: 32px;
+    }
     
-    &__tab {
+    &__tabs {
+        width: 100%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
 
         &__button {
-            color: variaveis.$corTextoSecundario;
-            background-color: variaveis.$corDeFundo;
-            letter-spacing: 2px;
-            border: none;
-            padding: 8px;
+            @include buttonForm;
+
+            &:hover {
+                background-color: lighten(variaveis.$corFundoLogin, 2%);
+            }
             
             &--is-active {
+                
                 border-bottom: 5px solid variaveis.$corTextoSecundario;
 
             }
@@ -20,29 +41,24 @@
     }
     
     &__list {
-        
         padding: 50px;
 
         &__item {
             display: none;
-            text-align: center;
-
+            
             h3 {
                 padding: 16px;
             }
             
             img {
-                width: 200px;
-                margin: 0 auto;
+                width: 300px;
+                border-radius: 16px;
             }
             
             &--is-active {
                 display: block;
 
             }
-
-
-
         }
     }
 }
