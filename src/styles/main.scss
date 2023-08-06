@@ -12,11 +12,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
 
 
+
+// Font-size, font-family e color.
 @mixin title($font-size: 1em){
     font-size: $font-size;
     font-family: 'Bungee Hairline', cursive;
     color: variaveis.$corTextoSecundario;
-
 }
 
 @mixin text($font-size: 1.2em){
@@ -26,6 +27,8 @@
 }
 
 
+
+// Aplicações nos campos texto.
 .title {
     @include title(3.2em);
     font-family: 'Bungee Spice', sans-serif;
@@ -46,6 +49,8 @@
 .text {
     @include text;
 }
+
+
 
 body {
     background-color: variaveis.$corDeFundo;

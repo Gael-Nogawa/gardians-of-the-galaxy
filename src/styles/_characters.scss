@@ -1,19 +1,23 @@
 @use 'variaveis';
 
-@mixin buttonForm {
+
+@mixin button-form {
     color: variaveis.$corTextoSecundario;
     background-color: variaveis.$corDeFundo;
-    letter-spacing: 2px;
+    cursor: pointer;
+   
     border: none;
     border-bottom: 5px solid transparent;
     padding: 8px;
     
 }
 
+
 .characters {
     
     text-align: center;
     padding: 100px;
+    padding-bottom: calc(100px - 70px);
 
     h2 {
         padding: 32px;
@@ -22,13 +26,17 @@
     &__tabs {
         width: 100%;
         display: flex;
-        justify-content:space-around;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 32px;
         align-items: center;
 
         &__button {
-            @include buttonForm;
+            @include button-form;
+            letter-spacing: 2px;
 
             &:hover {
+                font-weight: bolder;
                 background-color: lighten(variaveis.$corFundoLogin, 2%);
             }
             
@@ -42,7 +50,9 @@
     
     &__list {
         padding: 50px;
-
+        width: 100%;
+        height: 550px;
+        overflow: hidden;
         &__item {
             display: none;
             

@@ -4,26 +4,59 @@
 .actors {
     text-align: center;
     padding: 100px;
+    padding-bottom: calc(100px - 70px);
+
+    h2 {
+        padding: 32px;
+    }
 
     &__tabs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 32px;
+        align-items: center;
+        
 
         &__button {
-            @include characters.buttonForm;
+            @include characters.button-form;
+            letter-spacing: calc(bold - normal);
+            margin: 8px;
 
             &:hover {
-                background-color: lighten(variveis.$corFundoLogin,2%);
+                font-weight: bold;
+              
+                background-color: lighten(variaveis.$corFundoLogin,2%);
+            }
+
+            &--is-active {
+                border-bottom: 5px solid variaveis.$corTextoSecundario;
             }
         }
-
     }
 
 
     &__list {
+        padding: 50px;
+        width: 100%;
+        height: 550px;
+        overflow: hidden;
 
         &__item {
+            display: none;
 
+            h3 {
+                padding: 16px;
+            }
+            
             img {
                 width: 300px;
+                border-radius: 16px;
+            }
+
+            &--is-active {
+                display: block;
             }
 
         }
