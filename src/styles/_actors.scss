@@ -1,0 +1,32 @@
+@use 'variaveis';
+@use 'characters';
+
+.actors {
+    text-align: center;
+    padding: 100px;
+
+    &__tabs {
+
+        &__button {
+            @include characters.buttonForm;
+
+            &:hover {
+                background-color: lighten(variveis.$corFundoLogin,2%);
+            }
+        }
+
+    }
+
+
+    &__list {
+
+        &__item {
+
+            img {
+                width: 300px;
+            }
+
+        }
+
+    }
+}
