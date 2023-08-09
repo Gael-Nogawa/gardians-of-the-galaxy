@@ -1,0 +1,72 @@
+@use 'variaveis';
+@use 'characters';
+
+
+.form {
+    max-width: 690px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 640px){
+        width: 100%;
+        padding: 30px;
+    }
+
+
+    h2 {
+        padding: 32px;
+    }
+    h3 {
+        padding-bottom: 16px;
+    }
+    
+    &__section {
+        padding: 16px;
+        height: 400px;
+        overflow: hidden;
+
+
+        @media (max-width: 640px){
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            
+            background-color: transparent;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type=text]{
+            text-transform: capitalize;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 16px;
+            
+        
+        }
+
+        .btn__form {
+            @include characters.button-form;
+            border-bottom: none;
+            
+            &:hover {
+                font-weight: bolder;
+                background-color: lighten(variaveis.$corFundoLogin, 2%);
+                
+            }
+        }
+
+
+    }
+
+    .msg {
+        padding: 16px;
+    }
+}
