@@ -20,12 +20,13 @@
         display: flex;
         justify-content: center;
         
-
-        @media (max-width: 640px){
-           white-space: nowrap;
-           overflow-x: scroll;
-           justify-content: flex-start;
         
+        @media (max-width: 640px){
+            white-space: nowrap;
+            overflow-x: scroll;
+            justify-content: flex-start;
+            margin-bottom: 16px;
+
         }
         
         
@@ -70,7 +71,6 @@
             img {
                 width: 300px;
                 border-radius: 16px;
-                padding-top: 16px;
                 text-align: center;
             }
 
