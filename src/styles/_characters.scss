@@ -19,6 +19,11 @@
     padding: 100px;
     padding-bottom: calc(100px - 70px);
 
+    @media (max-width: 640px){
+        width: 100%;
+        padding: 30px;
+    }
+
     h2 {
         padding: 32px;
     }
@@ -27,9 +32,15 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 32px;
         align-items: center;
+
+        @media (max-width: 640px){
+            white-space: nowrap;
+            overflow-x: scroll;
+            justify-content: flex-start;
+            gap: 8px;
+         
+        }
 
         &__button {
             @include button-form;
@@ -53,6 +64,13 @@
         width: 100%;
         height: 550px;
         overflow: hidden;
+
+        @media (max-width: 640px){
+            padding: 0;
+            width: 100%;
+            height: 640px;
+            overflow: hidden;
+        }
         &__item {
             display: none;
             
@@ -61,12 +79,16 @@
             }
             
             img {
+                padding-top: 16px;
                 width: 300px;
                 border-radius: 16px;
+                text-align: center;
+
             }
             
             &--is-active {
                 display: block;
+                
 
             }
         }

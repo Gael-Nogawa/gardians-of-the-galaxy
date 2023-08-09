@@ -1,7 +1,41 @@
 document.addEventListener('DOMContentLoaded', function(){
     const buttonsCharac = document.querySelectorAll('[data-tab-button]');
-    const buttonsAct = document.querySelectorAll('[data-tab-button2')
+    const buttonsAct = document.querySelectorAll('[data-tab-button2');
+    const form = document.querySelector('.form__section');
+   
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        
+        let formValido = false;
+        let btn = document.querySelector('.btn__form');
+        
+
+        function validaNome(nomeCompleto){
+            const nomeComp = nomeCompleto.split(' ');
+            return nomeComp.length >=2;
+        }
+        
+        let nome = document.getElementById('nome');
+        let email = document.getElementById('email');
     
+
+        formValido = validaNome(nome.value);
+        if (formValido){
+            document.querySelector('.msg').innerHTML = 'Foi enviado para o seu e-mail!!!'
+
+            nome.value = '';
+            email.value = '';
+        } else {
+            document.querySelector('.msg').innerHTML = 'Erro no preenchimento. Vamos tentar de novo?'
+
+            nome.value = '';
+            email.value = '';
+        }
+    })
+    
+
+
     for (let i =0; i < buttonsCharac.length; i++){
         buttonsCharac[i].addEventListener('click', function(botao){
 
@@ -28,8 +62,15 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
 
+    
+
+
 
 })
+
+function topo(){
+    return window.scrollY = 0;
+}
 
 function removeBotaoAtivo(){
     const buttons = document.querySelectorAll('[data-tab-button]');
